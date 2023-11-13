@@ -1,0 +1,21 @@
+<aside class=" w-100px  mt-1-3 ml-1 bg-lblack absolute center border" *ngIf="viewService.showSidebar"><!--Sidebar shows when sidebar button is pressed-->
+    <!-- shows title of all blogg posts -->
+    <section class="w-100 mr-2 mt-2">
+        <h3 class="c-wsmoke font-medi" *ngIf="blogg.length == 0">NO STORYS YET </h3> <span class="dots"
+            *ngIf="blogg.length == 0">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </span>
+        <h3 class="c-wsmoke font-medi" routerLink="" *ngIf="blogg.length !== 0">TOP STORY POSTS</h3>
+        <ul class="style-none ">
+            <li class="" *ngFor=" let blogg of blogg">
+
+                <button class="hoverc bb w-100 hidden" routerLink="/blogg/{{ blogg.id }}"><a>{{
+                        blogg.title}}</a></button>
+
+
+            </li>
+        </ul>
+    </section>
+</aside>

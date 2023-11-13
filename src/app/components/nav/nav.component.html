@@ -1,0 +1,86 @@
+<nav class="nav">
+    <!-- Laptopview over 1200px -->
+    <ul class="nav-ul laptopview">
+        <li class="nav-a hover flex-row" routerLink="">START
+            <fa-icon class="home" [icon]="faHome"></fa-icon>
+        </li>
+        <li class="nav-a hover flex-row" routerLink="/profile">PROFILE
+            <fa-icon class="user" [icon]="user"></fa-icon>
+        </li>
+
+        <li class="flex-row hover w-100px" (click)="isSignIn ? loggOut() : toggleLoggInWindow()">{{ !isSignIn ? 'LOGGIN'
+            : 'LOGGOUT'}}<!-- Loggin button that opens the logginwindow | loggout button that loggs you out -->
+
+            <fa-icon class="admin-user" [icon]="isAdminView ? faRightFromBracket : faRightToBracket"></fa-icon>
+        </li>
+        <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
+            <!-- new story that only appears in Adminview -->
+
+            <fa-icon class="add-post" [icon]="newPost"></fa-icon>NEW STORY
+        </li>
+    </ul>
+
+    <!-- LoggIn modal -->
+
+        <div class="loggin-modal flex-col" *ngIf="viewService.showLoggIn && !isSignIn">
+            <span class="right " (click)="toggleLoggInWindow()">X</span><!--Button that closes the window-->
+            <main class="mt-5">
+
+                <legend>Sign In</legend>
+                <hr />
+                <form class="w-100">
+                    <label for="username">UserName:</label>
+                    <br />
+                    <input type="text" id="username" required placeholder="UserName" />
+                    <label for="password">Password:</label>
+                    <br />
+                    <input type="password" minlength="8" id="password" required placeholder="Password" />
+                    <button type="submit"
+                        (click)="loggIn()">LOGGIN</button><!--button that loggs you in and close the window and shows everything in adminview-->
+                </form>
+
+            </main>
+            <footer>
+                <div class="mt-10">You can also loggin with the following</div>
+                <hr />
+                <div class="center-align">
+                    <fa-icon [icon]="facebook" (click)="loggIn()"></fa-icon>
+                    <fa-icon [icon]="linkedin" (click)="loggIn()"></fa-icon>
+                    <fa-icon [icon]="github" (click)="loggIn()"></fa-icon>
+
+                </div>
+            </footer>
+        </div>
+
+
+    <span class="theme hover absolute flex-row" id="hide"
+        (click)="toggleThemeModal()">THEME<!--button that opens thememodal-->
+        <fa-icon class="themebtn" [icon]="faPallete"></fa-icon>
+        <app-thememodal></app-thememodal>
+
+    </span>
+    <span class="right hover absolute" id="hide" (click)="toggleSideBar()"><!--button that opens sidebar-->
+        <fa-icon [icon]="isAsideOpen ? down : up"></fa-icon>
+        <app-sidemodal></app-sidemodal>
+
+    </span>
+
+    <!-- Mobilview under 1200px -->
+    <ul class="nav-ul mobilview flex" id="flex">
+        <li class="nav-a hover flex-row" routerLink="">
+            <fa-icon class="home" [icon]="faHome"></fa-icon>
+        </li>
+        <li class="nav-a hover flex-row" routerLink="/profile">
+            <fa-icon class="user" [icon]="user"></fa-icon>
+        </li>
+        <li class="flex-row hover w-100px" (click)="isSignIn ? loggOut() : toggleLoggInWindow()">
+            <!--Opens the logginwindow and toggles loggin loggout-->
+            <fa-icon class="admin-user" [icon]="isAdminView ? faRightFromBracket : faRightToBracket"></fa-icon>
+        </li>
+
+        <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
+            <fa-icon class="add-post" [icon]="newPost"></fa-icon>
+        </li>
+    </ul>
+
+</nav>

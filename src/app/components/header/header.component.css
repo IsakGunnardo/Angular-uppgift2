@@ -1,0 +1,50 @@
+header {
+    background-image: url(https://cdn.pixabay.com/photo/2017/06/11/02/04/panorama-2391345_1280.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+h1 {
+    color: whitesmoke;
+    text-shadow: 0px 5px 10px white;
+    animation: scale alternate;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes scale {
+    0%{
+        scale: 1;
+    }
+
+    100%{
+        scale: 1.08;
+
+    }
+    
+}
+#mobil-view {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    #full-view {
+        display: none;
+    }
+
+    #mobil-view {
+        display: block;
+    }
+
+}

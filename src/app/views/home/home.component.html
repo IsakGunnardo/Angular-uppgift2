@@ -1,0 +1,36 @@
+<main class="bg-wsmoke container center shadow " id="full-screen">
+
+    <div class="w-100 center mt-5 ">
+
+        <section class="center">
+
+
+
+            <div class="center-align flex-col" *ngFor=" let blogg of blogg">
+
+                <article class="w-80 center mt-5 mb-5" routerLink="/blogg/{{ blogg.id }}">
+
+                    <div class="space-even">
+                        <strong class="xx-large text-shadow" id="size">{{ blogg.title}}</strong>
+                        <span class=" ml-2 absolute float-right " id="size"
+                            *ngIf="viewService.showCreateBloggPost" (click)="removePost(blogg.id)">
+                            <fa-icon  [icon]="faTrashCan"></fa-icon>
+                        </span>
+
+                    </div>
+                    <img class="w-100 shadow click" [src]="blogg.thumbnailUrl" alt="{{ blogg.title }} Thumbnail" />
+
+                </article>
+            </div>
+            <div *ngIf="blogg.length === 0">
+                <h3>NO STORYS YET..</h3>
+                <span>WAITING FOR STORY</span>
+                <span class="dots">
+                    <span class="dot">.</span>
+                    <span class="dot">.</span>
+                    <span class="dot">.</span>
+                </span>
+            </div>
+        </section>
+    </div>
+</main>

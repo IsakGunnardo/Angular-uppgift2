@@ -1,0 +1,14 @@
+<div class=" absolute thover w-fit w-100px ml-20 mb-10 mt-1" *ngIf="viewService.showThemeModal">
+    <div class=" fit-content flex-col center fit-content bg-lblack">
+
+        <span (click)="toggleTheme('light-theme')" (click)="activateButton('button1')"
+            [ngClass]="{'active': activeButton === 'button1'}">Light</span>
+
+        <span (click)="toggleTheme('dark-theme')" (click)="activateButton('button2')"
+            [ngClass]="{'active': activeButton === 'button2'}">Dark</span>
+
+        <span (click)="toggleTheme('fire-theme')" (click)="activateButton('button3')"
+            [ngClass]="{'active': activeButton === 'button3'}">Fire</span>
+
+    </div>
+</div>

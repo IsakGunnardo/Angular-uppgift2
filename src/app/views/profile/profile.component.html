@@ -1,0 +1,65 @@
+<main class="bg-wsmoke container center shadow h-fit-content" id="full-screen">
+
+
+    <div class="main ml-10 mr-10 mt-5" id="mb-35">
+        <div class="text-start flex-row mobil">
+            <a class="c-black" href="https://www.linkedin.com/in/isak-gunnardo-791191247/">
+                <img class="round w-250 h-200 border shadow" id="img-width"
+                    src="https://media.licdn.com/dms/image/D4E03AQGafcoB0qyFjA/profile-displayphoto-shrink_800_800/0/1668768755591?e=1704326400&v=beta&t=NIxgxgPU0FrdHPDiQyeB_hOd4V89NVWa0ntLwxhssM4" />
+            </a>
+            <section class="mt-80 mobil">
+                <ul class="style-none flex-row">
+                    <li><a class="large deco-none" href="https://www.linkedin.com/in/isak-gunnardo-791191247/"><fa-icon
+                                [icon]="linkedin"></fa-icon></a></li>
+                    <li><a class="large deco-none" href="https://www.facebook.com/isak.carlson"><fa-icon
+                                [icon]="facebook"></fa-icon></a></li>
+                    <li><a class="large deco-none" href="https://github.com/IsakGunnardo"><fa-icon
+                                [icon]="github"></fa-icon></a></li>
+
+
+                </ul>
+
+                <div class="hidden-scroll">
+                    <span><strong>Name:</strong> Isak Gunnardo</span>
+                    <br />
+                    <span><strong>Email:</strong> isak.gunnardo&#64;hotmail.com </span>
+                    <br />
+                    <span><strong>Phone:</strong> +46 738 284 775</span>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="flex-col text-start mt-2 hidden-scroll h-250 mb-5">
+            <h3 class="float-left">About me:</h3>
+            <article>Jag heter Isak Gunnardo och är 28 år.
+                Jag har tidigare jobbat som förskolelärare med åldrarna 3-5år på en förskola i
+                Vetlanda kommun i 9 år. Men under året 2022 kände jag att jag ville testa något annat
+                så jag sökte till frontend-utvecklare och kom in 2023. Så sedan mars 2023 har
+                jag studerat till frontend-utvecklare. Nu söker jag min LIA-plats inför
+                våren 2024.
+            </article>
+        </div>
+        <footer class="footer h-25  w-100 ">
+            <section class=" mb-2 w-60" id="w-100">
+                <form class="text-start w-100 mb-2" id="m-form" (ngSubmit)="onSubmit()" [formGroup]="formVar">
+                    <legend>Contact me:</legend>
+
+                    <input class="w-100 pl-2 " type="text" id="name" formControlName="name" placeholder="Name:" />
+                    <br />
+
+                    <input class="w-100 pl-2" type="email" id="email" formControlName="email" placeholder="Email:" />
+                    <br />
+
+                    <textarea class="w-100 pl-2" id="textarea" formControlName="textarea"
+                        placeholder="Write your message here.."></textarea>
+                    <br />
+                    <button type="submit">Submit</button>
+
+                </form>
+            </section>
+        </footer>
+    </div>
+
+
+</main>

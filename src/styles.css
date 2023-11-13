@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: fantasy;
+
+}
+
+.light-theme {
+  background: linear-gradient(white, rgb(243, 228, 201), white);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme {
+  background: linear-gradient(black, rgb(128, 126, 126), black);
+  color: #000000;
+}
+
+
+.fire-theme {
+  background: linear-gradient(rgb(211, 7, 7), rgb(146, 97, 7), rgb(106, 9, 9));
+  color: #000000;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+
+.dots {
+  display: inline-block;
+}
+
+
+.dot {
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  animation: fadeIn 3s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
