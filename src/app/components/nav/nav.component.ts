@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ViewService } from 'src/app/services/view.service';
 import { BloggService } from 'src/app/services/blogg.service';
 
@@ -55,15 +55,14 @@ export class NavComponent {
   isLoggInView: boolean = false;
   isSignIn: boolean = false;
 
-
-
   constructor(
     public viewService: ViewService,
     private bloggService: BloggService,
   ) {
-
     this.bloggService.load()
   }
+
+
 
   toggleCreateBloggPost() { //toggle the createbloggpost button
     this.isAdminView = !this.isAdminView;
@@ -91,15 +90,15 @@ export class NavComponent {
 
   loggOut() { //loggs user out and reloads the page
     window.location.reload()
-
+    this.bloggService.save()
   }
 
   toggleLogginButton() { //toggles the logginbutton between loggin and loggout 
     this.isSignIn = !this.isSignIn
-
+    this.bloggService.save()
   }
 
-  loggIn(){ //funciton that calls other functions
+  loggIn() { //funciton that calls other functions
     this.toggleCreateBloggPost();
     this.toggleLoggInWindow();
     this.toggleLogginButton()

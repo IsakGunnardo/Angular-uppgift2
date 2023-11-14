@@ -1,32 +1,32 @@
 <main class="bg-wsmoke container center shadow" id="full-screen">
     <h1 class="mt-2" *ngIf="viewService.showCreateBloggPost">WRITE YOUR STORY!</h1>
-    <div class="center-align " *ngIf="viewService.showCreateBloggPost"> <!--glöm inte ta bort !-->
+    <div class="center-align " *ngIf="viewService.showCreateBloggPost">
         <div class="w-80 bg-lgray mt-5 p-2 br-20">
 
             <input class="ml-10 w-20 h-30px float-left br-2200 hover" id="size" [(ngModel)]="title" placeholder="TITEL"
                 required />
-            <!-- <input class="category" #category placeholder="category" required=""/> -->
+            <input class="category ml-20 w-20 h-30px br-2200 hover" id="size"[(ngModel)]="category" placeholder="CATEGORY" required />
             <br />
             <textarea class="ml-10 h-200 w-80 float-left br-0220 hover" id="size" [(ngModel)]="body"
                 placeholder="WRITE YOUR STORY HERE.." #postTextArea required></textarea>
             <br />
             <div class="ml-10 w-100 text-start">
                 <input class="w-20 h-30px br-0022 hover" id="size" [(ngModel)]="thumbnailUrl"
-                    placeholder="ADD THUMBNAIL URL" required /><fa-icon class="fa-img" [icon]="img"></fa-icon>
+                    placeholder="ADD THUMBNAIL URL" required /><fa-icon class="fa-img " [icon]="img"></fa-icon>
             </div>
 
 
-            <button class="w-20 h-30px br-2200 hover #size hidden" id="size" type="submit"
-                (click)="upperCase(); addNewBloggPost(title, body, thumbnailUrl)">POST YOUR STORY</button>
+            <button class="w-20 h-30px br-2200 hover  hidden" id="size" type="submit"
+                (click)="upperCase(); addNewBloggPost(title, body, thumbnailUrl, category)">POST YOUR STORY</button>
 
         </div>
     </div>
     <div class="center-align mt-5">
         <h3 *ngIf="blogg.length !== 0">TOP STORY POSTS</h3>
     </div>
-    <div class="w-80 h-full-vh flex-wrap-gap mt-2 ml-10 mr-10" id="center-align">
-        <section class="flex-wrap-gap" *ngFor="let blogg of blogg">
-            <article class="flex-wrap" id="mt--20" routerLink="/blogg/{{ blogg.id }}">
+    <div class="w-80 h-full-vh flex-wrap-gap mt-2 ml-10 mr-10 scroll" id="center-align">
+        <section class="flex-wrap-gap mt-10" *ngFor="let blogg of blogg">
+            <article class="flex-wrap " id="mt--20" routerLink="/blogg/{{ blogg.id }}">
                 <img class="w-250 h-200 br-20 shadow scale" [src]="blogg.thumbnailUrl"
                     alt="{{ blogg.title }} Thumbnail" />
             </article>

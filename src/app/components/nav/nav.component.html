@@ -13,44 +13,44 @@
 
             <fa-icon class="admin-user" [icon]="isAdminView ? faRightFromBracket : faRightToBracket"></fa-icon>
         </li>
-        <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
-            <!-- new story that only appears in Adminview -->
+        <!-- new story that only appears in Adminview -->
 
-            <fa-icon class="add-post" [icon]="newPost"></fa-icon>NEW STORY
+        <li class="newpost hover w-100 absolute ml-46rem"  *ngIf="isAdminView && isSignIn " routerLink="newPost">
+            NEW STORY <fa-icon class="add-post" [icon]="newPost"></fa-icon>
         </li>
     </ul>
 
     <!-- LoggIn modal -->
 
-        <div class="loggin-modal flex-col" *ngIf="viewService.showLoggIn && !isSignIn">
-            <span class="right " (click)="toggleLoggInWindow()">X</span><!--Button that closes the window-->
-            <main class="mt-5">
+    <div class="loggin-modal flex-col" *ngIf="viewService.showLoggIn && !isSignIn">
+        <span class="right " (click)="toggleLoggInWindow()">X</span><!--Button that closes the window-->
+        <main class="mt-5">
 
-                <legend>Sign In</legend>
-                <hr />
-                <form class="w-100">
-                    <label for="username">UserName:</label>
-                    <br />
-                    <input type="text" id="username" required placeholder="UserName" />
-                    <label for="password">Password:</label>
-                    <br />
-                    <input type="password" minlength="8" id="password" required placeholder="Password" />
-                    <button type="submit"
-                        (click)="loggIn()">LOGGIN</button><!--button that loggs you in and close the window and shows everything in adminview-->
-                </form>
+            <legend>Sign In</legend>
+            <hr />
+            <form class="w-100">
+                <label for="username">UserName:</label>
+                <br />
+                <input type="text" id="username" required placeholder="UserName" />
+                <label for="password">Password:</label>
+                <br />
+                <input type="password" minlength="8" id="password" required placeholder="Password" />
+                <button type="submit"
+                    (click)="loggIn()">LOGGIN</button><!--button that loggs you in and close the window and shows everything in adminview-->
+            </form>
 
-            </main>
-            <footer>
-                <div class="mt-10">You can also loggin with the following</div>
-                <hr />
-                <div class="center-align">
-                    <fa-icon [icon]="facebook" (click)="loggIn()"></fa-icon>
-                    <fa-icon [icon]="linkedin" (click)="loggIn()"></fa-icon>
-                    <fa-icon [icon]="github" (click)="loggIn()"></fa-icon>
+        </main>
+        <footer>
+            <div class="mt-10">You can also loggin with the following</div>
+            <hr />
+            <div class="center-align">
+                <fa-icon [icon]="facebook" (click)="loggIn()"></fa-icon>
+                <fa-icon [icon]="linkedin" (click)="loggIn()"></fa-icon>
+                <fa-icon [icon]="github" (click)="loggIn()"></fa-icon>
 
-                </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+    </div>
 
 
     <span class="theme hover absolute flex-row" id="hide"
@@ -79,7 +79,7 @@
         </li>
 
         <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
-            <fa-icon class="add-post" [icon]="newPost"></fa-icon>
+            <fa-icon class="add-post" id="add-post-mobil"[icon]="newPost"></fa-icon>
         </li>
     </ul>
 

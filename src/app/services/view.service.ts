@@ -9,7 +9,7 @@ export class ViewService {
   showThemeModal: boolean = false
   showSidebar: boolean = false
   showLoggIn: boolean = false
-  signIn: boolean = false
+
 
   toggleCreateBloggPost(isAdmingView: boolean) {
     this.showCreateBloggPost = isAdmingView
@@ -26,12 +26,9 @@ export class ViewService {
 
   toggleLoggIn(isLoggInView: boolean){
 this.showLoggIn = isLoggInView
+
   }
 
-
-  loggIn(isSignIn: boolean) {
-    this.signIn = isSignIn
-  }
 
 
 }

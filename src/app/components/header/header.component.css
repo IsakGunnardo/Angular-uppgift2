@@ -8,6 +8,7 @@ header {
     margin-bottom: -10px;
     display: flex;
     justify-content: center;
+
     align-items: center;
     cursor: pointer;
 }
@@ -22,17 +23,20 @@ h1 {
 }
 
 
+
+
 @keyframes scale {
-    0%{
+    0% {
         scale: 1;
     }
 
-    100%{
+    100% {
         scale: 1.08;
 
     }
-    
+
 }
+
 #mobil-view {
     display: none;
 }

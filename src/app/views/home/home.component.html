@@ -4,9 +4,24 @@
 
         <section class="center">
 
+           <app-search></app-search>
+            <div class="center-align flex-col" *ngFor=" let blogPost of filteredBlogPosts" >
 
+                <article class="w-80 center mt-5 mb-5" routerLink="/blogg/{{ blogPost.id }}">
 
-            <div class="center-align flex-col" *ngFor=" let blogg of blogg">
+                    <div class="space-even">
+                        <strong class="xx-large text-shadow" id="size">{{ blogPost.title}}</strong>
+                        <span class=" ml-2 absolute float-right " id="size"
+                            *ngIf="viewService.showCreateBloggPost" (click)="removePost(blogPost.id)">
+                            <fa-icon  [icon]="faTrashCan"></fa-icon>
+                        </span>
+
+                    </div>
+                    <img class="w-100 shadow click" [src]="blogPost.thumbnailUrl" alt="{{ blogPost.title }} Thumbnail" />
+
+                </article>
+            </div>
+            <!-- <div class="center-align flex-col" *ngFor=" let blogg of blogg" >
 
                 <article class="w-80 center mt-5 mb-5" routerLink="/blogg/{{ blogg.id }}">
 
@@ -21,7 +36,7 @@
                     <img class="w-100 shadow click" [src]="blogg.thumbnailUrl" alt="{{ blogg.title }} Thumbnail" />
 
                 </article>
-            </div>
+            </div> -->
             <div *ngIf="blogg.length === 0">
                 <h3>NO STORYS YET..</h3>
                 <span>WAITING FOR STORY</span>

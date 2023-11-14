@@ -462,6 +462,12 @@ button {
     ;
     }
 
+    #add-post-mobil{
+
+        margin-left: -420px;
+    }
+
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -474,3 +480,4 @@ button {
     }
 
 }
+

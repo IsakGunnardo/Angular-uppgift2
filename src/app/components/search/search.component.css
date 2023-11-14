@@ -1,0 +1,17 @@
+button {
+    border: none;
+    margin-top: 5px;
+    color: whitesmoke;
+    margin-left: 5px;
+    margin-top: -50px;
+    font-size: medium;
+    background-color: transparent;
+    float: left;
+
+}
+input{
+position: absolute;
+margin-left: 15px;
+margin-top: -28px;
+
+}

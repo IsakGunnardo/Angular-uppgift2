@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -33,6 +34,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     HeaderComponent,
     FooterComponent,
     ScrollTopComponent,
+    SearchComponent,
 
 
   ],

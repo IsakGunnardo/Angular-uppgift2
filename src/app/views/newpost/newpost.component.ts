@@ -14,6 +14,7 @@ export class NewpostComponent {
   title: string = "";
   body: string = "";
   thumbnailUrl: string = "";
+  category: string = "";
   // category: string = ""; 
 
   img = faImage
@@ -32,11 +33,12 @@ export class NewpostComponent {
   upperCase() {
     this.title = this.title.toUpperCase();
     this.body = this.body.toUpperCase();
+    this.category = this.category.toUpperCase()
 
   }
 
   // fixa så att man inte kan trycka på addNewBloggPost button utan att skriva först
-  addNewBloggPost(title: string, body: string, thumbnailUrl: string): void {
+  addNewBloggPost(title: string, body: string, thumbnailUrl: string, category: string): void {
 
     const newBloggPost: Blogg = {
       title,
@@ -47,14 +49,14 @@ export class NewpostComponent {
       dislikes: 0,
       id: this.bloggService.blogg.length + 1,
       comments: [],
-      // category
+      category
 
     }
 
     this.title = '';
     this.body = '';
     this.thumbnailUrl = '';
-    // this.category = '';
+    // this.ca = '';
 
     this.bloggService.addBloggPost(newBloggPost)
     this.bloggService.save()

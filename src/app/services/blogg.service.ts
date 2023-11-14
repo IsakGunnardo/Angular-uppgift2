@@ -12,6 +12,7 @@ export class BloggService {
   user: string[] = [];
 
   private _blogg: Blogg[] = [];
+  private _filteredBlogPosts: Blogg[] = [];
 
   public load(): void {
     const json = localStorage.getItem('blogg');
@@ -49,6 +50,23 @@ export class BloggService {
     this.comments.push(newComment);
     this.save()
   }
+
+  filterBlogPostsByCategory(category: string): void {
+    this._filteredBlogPosts = this._blogg.filter(blogPost =>
+      blogPost.category.toUpperCase().includes(category.toUpperCase())
+      );
+  }
+
+  resetFilteredBlogPosts(): void {
+    this._filteredBlogPosts= this._blogg;
+  }
+
+  get filteredBlogPosts(): Blogg[] {
+    return this._filteredBlogPosts
+  }
+
+
+  
 
 
 }
