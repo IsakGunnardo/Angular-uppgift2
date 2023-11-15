@@ -12,7 +12,7 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent {
   bloggId: number = 0;
 
-  
+
   faTrashCan = faTrashCan
 
   constructor(
@@ -30,7 +30,7 @@ export class HomeComponent {
   removePost(bloggId: number): void {
     this.bloggService.removeBloggPost(bloggId);
   }
-  
+
   get filteredBlogPosts(): Blogg[] {
     return this.bloggService.filteredBlogPosts
   }

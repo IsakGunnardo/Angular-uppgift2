@@ -2,8 +2,6 @@
     position: fixed;
 }
 
-
-
 /* container */
 .container {
     width: 80%;
@@ -11,12 +9,9 @@
     margin-right: 10%;
     display: flex;
     flex-direction: column;
-
 }
 
-
 /* width */
-
 .btn-w-40 {
     width: 90px;
     height: 20px;
@@ -144,7 +139,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 9%;
-
 }
 
 .flex-gap {
@@ -167,19 +161,16 @@
 .br-0220 {
     border-radius: 0px 20px 20px 0px;
     border: 0.2px solid black;
-
 }
 
 .br-2200 {
     border-radius: 20px 20px 0px 0px;
     border: 0.2px solid black;
-
 }
 
 .br-0022 {
     border-radius: 0px 0px 20px 20px;
     border: 0.2px solid black;
-
 }
 
 
@@ -219,7 +210,6 @@
     text-align: end;
 }
 
-
 /* background-color */
 .bg-wsmoke {
     background-color: whitesmoke;
@@ -231,7 +221,6 @@
 
 .bg-flowerblue {
     background-color: cornflowerblue;
-
 }
 
 .bg-lblack {
@@ -252,7 +241,6 @@
 .float-right {
     float: right;
 }
-
 
 /* hover */
 .scale:hover {
@@ -312,7 +300,6 @@
 .dots {
     display: inline-block;
 }
-
 
 .dot {
     width: 2px;

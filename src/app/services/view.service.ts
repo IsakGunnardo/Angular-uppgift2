@@ -9,26 +9,31 @@ export class ViewService {
   showThemeModal: boolean = false
   showSidebar: boolean = false
   showLoggIn: boolean = false
+  showSearchBar: boolean = false
+  toggleLoggIn: boolean = false
 
-
-  toggleCreateBloggPost(isAdmingView: boolean) {
+  toggleAdminView(isAdmingView: boolean) {
     this.showCreateBloggPost = isAdmingView
   }
 
   toggleThemeModal(isModalOpen: boolean) {
     this.showThemeModal = isModalOpen
-
   }
 
   toggleSideBar(isAsideOpen: boolean) {
     this.showSidebar = isAsideOpen
   }
 
-  toggleLoggIn(isLoggInView: boolean){
-this.showLoggIn = isLoggInView
-
+  toggleLoggInWindow(isLoggInView: boolean) {
+    this.showLoggIn = isLoggInView
   }
 
+  toggleLoggInButton(isSignIn: boolean) {
+    this.toggleLoggIn = isSignIn
+  }
 
+  toggleSearchBar(isSearchBarOpen: boolean) {
+    this.showSearchBar = isSearchBarOpen
+  }
 
 }

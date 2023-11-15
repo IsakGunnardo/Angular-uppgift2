@@ -54,20 +54,15 @@ export class BloggService {
   filterBlogPostsByCategory(category: string): void {
     this._filteredBlogPosts = this._blogg.filter(blogPost =>
       blogPost.category.toUpperCase().includes(category.toUpperCase())
-      );
+    );
   }
 
   resetFilteredBlogPosts(): void {
-    this._filteredBlogPosts= this._blogg;
+    this._filteredBlogPosts = this._blogg;
   }
 
   get filteredBlogPosts(): Blogg[] {
     return this._filteredBlogPosts
   }
-
-
-  
-
-
 }
 

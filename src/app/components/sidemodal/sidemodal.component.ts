@@ -10,7 +10,7 @@ import { Blogg } from 'src/app/models/blogg';
   styleUrls: ['./sidemodal.component.css']
 })
 export class SidemodalComponent {
-  
+
   constructor(
     private bloggService: BloggService,
     public viewService: ViewService

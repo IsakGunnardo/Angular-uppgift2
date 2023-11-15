@@ -5,8 +5,6 @@
     width: 100%;
     height: 40px;
     background-color: black;
-
-
 }
 
 .nav-ul {
@@ -18,7 +16,6 @@
     margin-left: 25%;
     gap: 32%;
     position: absolute;
-
 }
 
 .nav-img {
@@ -35,7 +32,6 @@
 
 fa-icon {
     font-size: x-large;
-
 }
 
 li,
@@ -57,15 +53,11 @@ span:hover {
 .themebtn {
     font-size: medium;
     margin-left: 8px;
-
 }
 
 .add-post {
     margin-right: 8px;
 }
-
-
-
 
 /* container */
 .container {
@@ -74,14 +66,12 @@ span:hover {
     margin-right: 10%;
     display: flex;
     flex-direction: column;
-
 }
 
 
 /* width */
 .w-100px {
     width: 100px;
-
 }
 
 .w-100 {
@@ -236,7 +226,7 @@ span:hover {
     padding-left: 2%;
 }
 
-.p-5{
+.p-5 {
     padding: 5%;
 }
 
@@ -246,13 +236,11 @@ span:hover {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 9%;
-
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
-
 }
 
 .flex-row {
@@ -279,19 +267,16 @@ span:hover {
 .br-0220 {
     border-radius: 0px 20px 20px 0px;
     border: 0.2px solid black;
-
 }
 
 .br-2200 {
     border-radius: 20px 20px 0px 0px;
     border: 0.2px solid black;
-
 }
 
 .br-0022 {
     border-radius: 0px 0px 20px 20px;
     border: 0.2px solid black;
-
 }
 
 .round {
@@ -324,7 +309,6 @@ span:hover {
 .text-end {
     text-align: end;
 }
-
 
 /* background-color */
 .bg-wsmoke {
@@ -387,7 +371,6 @@ span:hover {
     font-size: xx-large;
 }
 
-
 input {
     height: 30px;
     margin: 4%;
@@ -416,7 +399,6 @@ button {
     border-radius: 10px;
     position: fixed;
     margin-left: 38%;
-
     margin-top: 30%;
     z-index: 1;
 }
@@ -426,6 +408,18 @@ button {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     font-size: 20px;
+}
+
+.opened {
+    color: coral;
+}
+
+.closed {
+    color: whitesmoke;
+}
+
+.coral {
+    color: coral;
 }
 
 @media screen and (max-width: 1200px) {
@@ -453,21 +447,17 @@ button {
     }
 
     .mobilview {
-
         display: block;
     }
-    .loggin-modal{
+
+    .loggin-modal {
         width: 100%;
         margin-left: 0%;
-    ;
     }
 
-    #add-post-mobil{
-
+    #add-post-mobil {
         margin-left: -420px;
     }
-
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -475,9 +465,7 @@ button {
         display: none;
     }
 
-    .loggin-modal{
+    .loggin-modal {
         margin-left: 38%;
     }
-
 }
-

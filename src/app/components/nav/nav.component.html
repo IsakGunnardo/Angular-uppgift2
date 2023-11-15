@@ -1,21 +1,22 @@
 <nav class="nav">
     <!-- Laptopview over 1200px -->
     <ul class="nav-ul laptopview">
-        <li class="nav-a hover flex-row" routerLink="">START
+        <li class="nav-a hover flex-row" routerLink="/">START
             <fa-icon class="home" [icon]="faHome"></fa-icon>
         </li>
         <li class="nav-a hover flex-row" routerLink="/profile">PROFILE
             <fa-icon class="user" [icon]="user"></fa-icon>
         </li>
 
-        <li class="flex-row hover w-100px" (click)="isSignIn ? loggOut() : toggleLoggInWindow()">{{ !isSignIn ? 'LOGGIN'
+        <li class="flex-row hover w-100px" (click)="isSignIn ? loggOut() : toggleLoggInWindow()"
+            [class.opened]="isLoggInView" [class.closed]="!isLoggInView">
+            {{ !isSignIn ? 'LOGGIN'
             : 'LOGGOUT'}}<!-- Loggin button that opens the logginwindow | loggout button that loggs you out -->
-
             <fa-icon class="admin-user" [icon]="isAdminView ? faRightFromBracket : faRightToBracket"></fa-icon>
         </li>
         <!-- new story that only appears in Adminview -->
 
-        <li class="newpost hover w-100 absolute ml-46rem"  *ngIf="isAdminView && isSignIn " routerLink="newPost">
+        <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
             NEW STORY <fa-icon class="add-post" [icon]="newPost"></fa-icon>
         </li>
     </ul>
@@ -53,13 +54,15 @@
     </div>
 
 
-    <span class="theme hover absolute flex-row" id="hide"
-        (click)="toggleThemeModal()">THEME<!--button that opens thememodal-->
+    <span class="theme hover absolute flex-row" id="hide" (click)="toggleThemeModal()" [class.opened]="isModalOpen"
+        [class.closed]="!isModalOpen">THEME<!--button that opens thememodal-->
         <fa-icon class="themebtn" [icon]="faPallete"></fa-icon>
         <app-thememodal></app-thememodal>
 
     </span>
-    <span class="right hover absolute" id="hide" (click)="toggleSideBar()"><!--button that opens sidebar-->
+    <span class="right hover absolute" id="hide" (click)="toggleSideBar()"
+    [class.opened]="isAsideOpen"
+    [class.closed]="!isAsideOpen"><!--button that opens sidebar-->
         <fa-icon [icon]="isAsideOpen ? down : up"></fa-icon>
         <app-sidemodal></app-sidemodal>
 
@@ -79,7 +82,7 @@
         </li>
 
         <li class="newpost hover w-100 absolute ml-46rem" *ngIf="isAdminView && isSignIn " routerLink="newPost">
-            <fa-icon class="add-post" id="add-post-mobil"[icon]="newPost"></fa-icon>
+            <fa-icon class="add-post" id="add-post-mobil" [icon]="newPost"></fa-icon>
         </li>
     </ul>
 

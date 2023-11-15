@@ -1,4 +1,4 @@
-footer{
+footer {
     background-color: black;
     width: 100%;
     height: 200px;
@@ -13,9 +13,6 @@ footer{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
-
-
 }
 
 .img-width {
@@ -25,6 +22,7 @@ footer{
     border: 5px black solid;
     box-shadow: 5px 10px 10px 0px;
 }
+
 #name,
 #email,
 #textarea {
@@ -33,7 +31,6 @@ footer{
 }
 
 @media screen and (max-width: 1200px) {
-
     #img-width {
         width: 150px;
         height: 150px;
@@ -45,7 +42,6 @@ footer{
         display: flex;
         flex-direction: column;
     }
-
 
     #w-100 {
         width: 100%;
@@ -67,7 +63,6 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
     }
 
     #name,
@@ -76,8 +71,6 @@ footer{
         margin: 0;
         width: 80%;
     }
-
-
 }
 
 /* width */
@@ -202,8 +195,6 @@ footer{
 
 .mb-2 {
     margin-bottom: 2%;
-
-
 }
 
 .mb-35 {
@@ -242,13 +233,11 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 9%;
-
 }
 
 .flex-col {
     display: flex;
     flex-direction: column;
-
 }
 
 .flex-row {
@@ -287,7 +276,6 @@ footer{
 .br-0022 {
     border-radius: 0px 0px 20px 20px;
     border: 0.2px solid black;
-
 }
 
 .round {
@@ -406,4 +394,13 @@ button {
 
 .hidden-scroll {
     overflow: scroll;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover{
+    color: coral;
 }

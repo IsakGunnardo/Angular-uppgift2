@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   font-family: fantasy;
-
 }
 
 .light-theme {
@@ -17,7 +16,6 @@
   color: #000000;
 }
 
-
 .fire-theme {
   background: linear-gradient(rgb(211, 7, 7), rgb(146, 97, 7), rgb(106, 9, 9));
   color: #000000;
@@ -27,11 +25,9 @@
   overflow: hidden;
 }
 
-
 .dots {
   display: inline-block;
 }
-
 
 .dot {
   width: 2px;
@@ -52,7 +48,6 @@
 }
 
 @keyframes fadeIn {
-
   0% {
     opacity: 0;
   }

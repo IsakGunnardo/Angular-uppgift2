@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { ProfileComponent } from './views/profile/profile.component';
 import { NavComponent } from './components/nav/nav.component';
 import { NewpostComponent } from './views/newpost/newpost.component';

@@ -8,7 +8,6 @@ header {
     margin-bottom: -10px;
     display: flex;
     justify-content: center;
-
     align-items: center;
     cursor: pointer;
 }
@@ -32,9 +31,7 @@ h1 {
 
     100% {
         scale: 1.08;
-
     }
-
 }
 
 #mobil-view {
@@ -50,5 +47,4 @@ h1 {
     #mobil-view {
         display: block;
     }
-
 }

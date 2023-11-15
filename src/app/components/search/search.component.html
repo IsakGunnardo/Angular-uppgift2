@@ -1,13 +1,12 @@
-
-    <button class="left" ><fa-icon [icon]="search" (click)="toggleSearchBar()"></fa-icon>
-    
-        <section class="header-div" *ngIf="showSearchBar">
-
-            <input placeholder="SEARCH CATEGORY" [(ngModel)]="categorySearch" (change)="searchCategory()" />
-            
-        </section>
-    
+<div>
+    <button>
+        <fa-icon [icon]="search" (click)="toggleSearchBar()" [class.opened-button]="isSearchBarOpen"
+            [class.closed-button]="!isSearchBarOpen">
+        </fa-icon>
     </button>
+    <section class="" *ngIf="viewService?.showSearchBar">
 
+        <input placeholder="SEARCH CATEGORY" [(ngModel)]="categorySearch" (change)="searchCategory()" />
 
-
+    </section>
+</div>

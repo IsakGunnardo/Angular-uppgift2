@@ -17,7 +17,6 @@ export class Blogg {
         this.body = body;
         this.thumbnailUrl = thumbnailUrl;
         this.category = category
-
         this.likes = 0;
         this.dislikes = 0;
         this.creationDate = new Date()

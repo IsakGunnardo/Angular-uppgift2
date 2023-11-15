@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ViewService } from 'src/app/services/view.service';
 import { BloggService } from 'src/app/services/blogg.service';
 
+
 import {
   faHome,
   faUser,
@@ -62,11 +63,9 @@ export class NavComponent {
     this.bloggService.load()
   }
 
-
-
-  toggleCreateBloggPost() { //toggle the createbloggpost button
+  toggleAdminView() { //toggle the createbloggpost button
     this.isAdminView = !this.isAdminView;
-    this.viewService.toggleCreateBloggPost(this.isAdminView)
+    this.viewService.toggleAdminView(this.isAdminView)
     this.bloggService.save()
   }
 
@@ -82,26 +81,23 @@ export class NavComponent {
     this.bloggService.save()
   }
 
-  toggleLoggInWindow() { //togglelogginwindow
+  toggleLoggInWindow() { //toggles the logginwindow
     this.isLoggInView = !this.isLoggInView
-    this.viewService.toggleLoggIn(this.isLoggInView)
-    this.bloggService.save()
+    this.viewService.toggleLoggInWindow(this.isLoggInView)
   }
 
   loggOut() { //loggs user out and reloads the page
     window.location.reload()
-    this.bloggService.save()
   }
 
-  toggleLogginButton() { //toggles the logginbutton between loggin and loggout 
+  toggleLoggInButton() { //toggles the logginbutton between loggin and loggout 
     this.isSignIn = !this.isSignIn
-    this.bloggService.save()
   }
 
   loggIn() { //funciton that calls other functions
-    this.toggleCreateBloggPost();
+    this.toggleAdminView();
     this.toggleLoggInWindow();
-    this.toggleLogginButton()
+    this.toggleLoggInButton()
   }
 }
 

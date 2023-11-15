@@ -29,7 +29,6 @@ export class ScrollTopComponent implements OnInit {
     })();
   }
 
-
   ngOnInit(): void {
 
   }
